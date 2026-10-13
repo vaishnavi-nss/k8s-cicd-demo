@@ -43,8 +43,8 @@ TEMPLATE = """
     * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #141118;
-      color: #fef3c7;
+      background: #faf8f5;
+      color: #292524;
       margin: 0;
       padding: 2.5rem 1rem;
     }
@@ -55,28 +55,26 @@ TEMPLATE = """
       justify-content: space-between;
       align-items: center;
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+      border-bottom: 2px solid #fed7aa;
       margin-bottom: 2rem;
     }
     .header h1 { 
       margin: 0; 
-      font-size: 1.75rem; 
-      background: linear-gradient(135deg, #fcd34d 0%, #fb923c 60%, #f97316 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 1.85rem; 
+      color: #c2410c;
       display: flex; 
       align-items: center; 
       gap: 0.6rem; 
-      font-weight: 700;
+      font-weight: 800;
     }
     .badge-live {
-      background: rgba(245, 158, 11, 0.15); 
-      color: #fde047; 
+      background: #fef3c7; 
+      color: #b45309; 
       border: 1px solid #f59e0b;
       padding: 0.35rem 0.9rem; 
       border-radius: 9999px; 
       font-size: 0.8rem; 
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.04em;
     }
     
@@ -87,37 +85,37 @@ TEMPLATE = """
       margin-bottom: 2rem;
     }
     .meta-card {
-      background: #1e1926;
-      border: 1px solid rgba(251, 146, 60, 0.25);
-      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      border-radius: 12px;
       padding: 1.1rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.06);
       position: relative;
       overflow: hidden;
     }
     .meta-card::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; height: 3px;
+      top: 0; left: 0; right: 0; height: 4px;
       background: linear-gradient(90deg, #f59e0b, #ea580c);
     }
-    .meta-title { font-size: 0.75rem; text-transform: uppercase; color: #d97706; font-weight: 600; letter-spacing: 0.05em; }
-    .meta-value { font-size: 1.1rem; font-weight: 600; color: #fffbeb; margin-top: 0.35rem; }
-    .meta-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #fde047; }
+    .meta-title { font-size: 0.75rem; text-transform: uppercase; color: #9a3412; font-weight: 700; letter-spacing: 0.05em; }
+    .meta-value { font-size: 1.15rem; font-weight: 700; color: #1c1917; margin-top: 0.35rem; }
+    .meta-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #ea580c; }
     
     .panel {
-      background: #1e1926;
-      border: 1px solid rgba(251, 146, 60, 0.2);
-      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      border-radius: 12px;
       padding: 1.6rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 15px rgba(234, 88, 12, 0.05);
     }
     .panel h2 { 
       margin-top: 0; 
-      font-size: 1.15rem; 
-      color: #fde68a;
-      letter-spacing: 0.02em;
+      font-size: 1.2rem; 
+      color: #9a3412;
+      font-weight: 700;
     }
     
     .form-grid {
@@ -126,32 +124,33 @@ TEMPLATE = """
       gap: 0.8rem;
     }
     input, select {
-      padding: 0.7rem 0.9rem;
+      padding: 0.75rem 0.9rem;
       border-radius: 8px;
       font-size: 0.9rem;
-      border: 1px solid #453424;
-      background: #141118;
-      color: #fef3c7;
+      border: 1.5px solid #fed7aa;
+      background: #fffcf9;
+      color: #292524;
       outline: none;
-      transition: border 0.2s;
+      transition: border 0.2s, box-shadow 0.2s;
     }
     input:focus, select:focus {
-      border-color: #f59e0b;
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
     }
     button {
-      padding: 0.7rem 1.4rem;
+      padding: 0.75rem 1.4rem;
       border-radius: 8px;
       background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
-      color: #141118;
+      color: #ffffff;
       font-weight: 700;
       font-size: 0.9rem;
       border: none;
       cursor: pointer;
-      box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35);
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
       transition: transform 0.15s, opacity 0.2s;
     }
     button:hover { 
-      opacity: 0.92;
+      opacity: 0.95;
       transform: translateY(-1px);
     }
     
@@ -159,26 +158,27 @@ TEMPLATE = """
     th { 
       text-align: left; 
       padding: 0.85rem 1rem; 
-      border-bottom: 1px solid rgba(245, 158, 11, 0.3); 
+      border-bottom: 2px solid #fed7aa; 
       font-size: 0.78rem; 
-      color: #fbbf24; 
+      color: #9a3412; 
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      font-weight: 700;
     }
     td { 
-      padding: 0.9rem 1rem; 
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+      padding: 0.95rem 1rem; 
+      border-bottom: 1px solid #ffedd5; 
       font-size: 0.92rem; 
-      color: #fef3c7;
+      color: #292524;
     }
     tr:hover td {
-      background: rgba(245, 158, 11, 0.03);
+      background: #fff7ed;
     }
     
     .sev-critical { 
-      background: rgba(239, 68, 68, 0.15);
-      color: #fca5a5; 
-      border: 1px solid rgba(239, 68, 68, 0.4);
+      background: #fee2e2;
+      color: #b91c1c; 
+      border: 1px solid #fca5a5;
       padding: 0.25rem 0.6rem;
       border-radius: 6px;
       font-size: 0.78rem;
@@ -186,9 +186,9 @@ TEMPLATE = """
       display: inline-block;
     }
     .sev-high { 
-      background: rgba(249, 115, 22, 0.15);
-      color: #fdba74; 
-      border: 1px solid rgba(249, 115, 22, 0.4);
+      background: #ffedd5;
+      color: #c2410c; 
+      border: 1px solid #fdba74;
       padding: 0.25rem 0.6rem;
       border-radius: 6px;
       font-size: 0.78rem;
@@ -196,9 +196,9 @@ TEMPLATE = """
       display: inline-block;
     }
     .sev-normal { 
-      background: rgba(234, 179, 8, 0.15);
-      color: #fde047; 
-      border: 1px solid rgba(234, 179, 8, 0.4);
+      background: #fef9c3;
+      color: #854d0e; 
+      border: 1px solid #fde047;
       padding: 0.25rem 0.6rem;
       border-radius: 6px;
       font-size: 0.78rem;
@@ -212,9 +212,9 @@ TEMPLATE = """
       border-radius: 6px;
       font-size: 0.78rem;
       font-weight: 600;
-      background: #2a2333;
-      color: #fde68a;
-      border: 1px solid rgba(245, 158, 11, 0.2);
+      background: #fff7ed;
+      color: #9a3412;
+      border: 1px solid #ffedd5;
     }
   </style>
 </head>
@@ -223,7 +223,7 @@ TEMPLATE = """
     <div class="header">
       <div>
         <h1>☀️ AeroWeather Sentinel</h1>
-        <small style="color: #d97706;">Aviation Meteorological Advisory & Micro-Climate Telemetry Dispatch</small>
+        <small style="color: #9a3412; font-weight: 500;">Aviation Meteorological Advisory & Micro-Climate Telemetry Dispatch</small>
       </div>
       <div>
         <span class="badge-live">Telemetry Engine v1.0 • ACTIVE</span>
@@ -241,7 +241,7 @@ TEMPLATE = """
       </div>
       <div class="meta-card">
         <div class="meta-title">Continuous Integration</div>
-        <div class="meta-value" style="color: #fb923c;">Automated via Jenkins</div>
+        <div class="meta-value" style="color: #ea580c;">Automated via Jenkins</div>
       </div>
     </div>
 
@@ -275,7 +275,7 @@ TEMPLATE = """
         <tbody>
           {% for item in advisories %}
           <tr>
-            <td class="meta-code" style="font-weight: 600; color: #fde047;">{{ item.station }}</td>
+            <td class="meta-code" style="font-weight: 700; color: #c2410c;">{{ item.station }}</td>
             <td>{{ item.condition }}</td>
             <td>{{ item.wind_speed }}</td>
             <td>
